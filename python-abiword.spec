@@ -2,7 +2,7 @@
 
 Name: python-abiword
 Version: 0.6.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Python bindings for libabiword
 License: GPL+
 Group: Development/Python

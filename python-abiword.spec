@@ -12,11 +12,11 @@ Source: http://www.sugarlabs.org/~marco/jhbuild/pyabiword-0.6.1.tar.gz
 
 Requires: pygtk2.0  
 Requires: python  
-Requires: abiword >= 2.6.5
+Requires: abiword >= 2.6.6
 
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
-BuildRequires: abiword-devel >= 2.6.5
+BuildRequires: abiword-devel >= 2.6.6
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 

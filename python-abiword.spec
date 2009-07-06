@@ -20,6 +20,7 @@ BuildRequires: libpython-devel
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
+
 %description
 This package installs Python bindings for libabiword.
 
@@ -28,20 +29,18 @@ This package installs Python bindings for libabiword.
 
 
 %build
-%configure  \
-	am_cv_python_pyexecdir=%{python_sitelib}
-make 
+%configure am_cv_python_pyexecdir=%{python_sitelib}
+make
 
 %install
 rm -rf %{buildroot}
-make  \
-	install \
-	DESTDIR=%{buildroot}
+make DESTDIR=%{buildroot} install
+
 
 %clean
 rm -rf %{buildroot}
 
-%files
+%files 
 %defattr(-,root,root,-)
 %{python_sitelib}/*
 %{_datadir}/pygtk/2.0/defs/*.defs

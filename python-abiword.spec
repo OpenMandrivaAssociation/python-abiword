@@ -29,6 +29,7 @@ This package installs Python bindings for libabiword.
 
 
 %build
+%define __libtoolize true
 %configure am_cv_python_pyexecdir=%{python_sitelib}
 make
 

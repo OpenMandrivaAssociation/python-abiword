@@ -2,7 +2,7 @@
 
 Name: python-abiword
 Version: 0.7.8
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Python bindings for libabiword
 License: GPL+
 Group: Development/Python
@@ -10,11 +10,11 @@ Url: http://abisource.com/
 
 Source: http://www.abisource.com/downloads/pyabiword/0.7.8/pyabiword-0.7.8.tar.gz
 
-Requires: abiword >= 2.7.7
+Requires: abiword >= 2.7.6
 Requires: pygtk2.0  
 Requires: python  
 
-BuildRequires: abiword-devel >= 2.7.7
+BuildRequires: abiword-devel >= 2.7.6
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
 

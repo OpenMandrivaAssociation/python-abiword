@@ -10,11 +10,13 @@ Url: http://abisource.com/
 
 Source: http://www.abisource.com/downloads/pyabiword/0.7.8/pyabiword-0.7.8.tar.gz
 
-Requires: abiword >= 2.7.6
+Requires: abiword >= 2.7
+Requires: python-gobject  
 Requires: pygtk2.0  
 Requires: python  
 
-BuildRequires: abiword-devel >= 2.7.6
+BuildRequires: abiword-devel >= 2.7
+BuildRequires: python-gobject-devel  
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
 

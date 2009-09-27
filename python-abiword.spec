@@ -22,7 +22,7 @@ BuildRequires: abiword-devel >= 2.8.0
 BuildRequires: libglade2.0-devel
 BuildRequires: python-gobject-devel  
 BuildRequires: pygtk2.0-devel  
-BuildRequires: libpython-devel  
+BuildRoot: %_tmppath/%name-%version-buildroot
 
 %description
 This package installs Python bindings for libabiword.

@@ -2,43 +2,43 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: python-abiword
-Version: 0.7.8
-Release: %mkrel 2
+Version: 0.8.0
+Release: %mkrel -c svn28229 1
 Summary: Python bindings for libabiword
 License: GPL+
 Group: Development/Python
 Url: http://abisource.com/
 
-Source: http://www.abisource.com/downloads/pyabiword/0.7.8/pyabiword-0.7.8.tar.gz
+Source: http://www.abisource.com/downloads/pyabiword/0.7.8/pyabiword-%{version}.tar.gz
+Patch0: pyabiword-0.8.0-linkage.patch
 
-Requires: abiword >= 2.7
-Requires: python-gobject  
-Requires: pygtk2.0  
-Requires: python  
+Requires: abiword >= 2.8.0
+Requires: python-gobject
+Requires: pygtk2.0
 
-BuildRequires: abiword-devel >= 2.7
+%py_requires -d
+
+BuildRequires: abiword-devel >= 2.8.0
+BuildRequires: libglade2.0-devel
 BuildRequires: python-gobject-devel  
 BuildRequires: pygtk2.0-devel  
 BuildRequires: libpython-devel  
-
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
 
 %description
 This package installs Python bindings for libabiword.
 
 %prep
-%setup -q -n pyabiword-0.7.8
-
+%setup -q -n pyabiword-%{version}
+%patch0 -p0
 
 %build
-%define __libtoolize true
-%configure am_cv_python_pyexecdir=%{python_sitelib}
-make
+NOCONFIGURE=yes ./autogen.sh
+%configure2_5x am_cv_python_pyexecdir=%{python_sitelib}
+%make
 
 %install
 rm -rf %{buildroot}
-make DESTDIR=%{buildroot} install
+%makeinstall_std
 
 
 %clean

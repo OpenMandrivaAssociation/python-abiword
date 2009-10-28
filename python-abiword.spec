@@ -1,6 +1,6 @@
 Name: python-abiword
 Version: 0.8.0
-Release: %mkrel -c svn28229 1
+Release: %mkrel 1
 Summary: Python bindings for libabiword
 License: GPL+
 Group: Development/Python
@@ -12,9 +12,7 @@ Patch0: pyabiword-0.8.0-linkage.patch
 Requires: abiword >= 2.8.0
 Requires: python-gobject
 Requires: pygtk2.0
-
 %py_requires -d
-
 BuildRequires: abiword-devel >= 2.8.0
 BuildRequires: libglade2.0-devel
 BuildRequires: python-gobject-devel  

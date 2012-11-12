@@ -1,0 +1,11 @@
+--- src/Makefile.am~	2007-01-27 11:36:24.000000000 +0100
++++ src/Makefile.am	2009-09-27 08:36:11.000000000 +0200
+@@ -19,7 +19,7 @@
+ # pyabiword module
+ pkgpyexec_LTLIBRARIES = abiword.la
+ abiword_la_LDFLAGS = -module -avoid-version
+-abiword_la_LIBADD = $(PYGTK_LIBS) $(ABIWORD_LIBS)
++abiword_la_LIBADD = $(PYGTK_LIBS) $(ABIWORD_LIBS) -lpython$(PYTHON_VERSION)
+ abiword_la_SOURCES = pyabiwordmodule.cpp
+ nodist_abiword_la_SOURCES = pyabiword.c
+ 

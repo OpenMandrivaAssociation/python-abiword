@@ -4,7 +4,7 @@ Release: %mkrel 2
 Summary: Python bindings for libabiword
 License: GPL+
 Group: Development/Python
-Url: http://abisource.com/
+Url: https://abisource.com/
 
 Source: http://www.abisource.com/downloads/pyabiword/%{version}/pyabiword-%{version}.tar.gz
 Patch0: pyabiword-0.8.0-linkage.patch
